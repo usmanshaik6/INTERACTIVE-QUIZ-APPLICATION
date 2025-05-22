@@ -40,4 +40,4 @@ JavaScript
 
 ## OUTPUT:
 
-![img](https://github.com/user-attachments/assets/f8337f11-3dd5-4c4f-957f-9a49ad4941c1)
+![img(https://github.com/user-attachments/assets/f8337f11-3dd5-4c4f-957f-9a49ad4941c1)
