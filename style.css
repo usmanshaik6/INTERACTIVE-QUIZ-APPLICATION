@@ -1,0 +1,171 @@
+/* Global font & reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: src:'image1.jepg';
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+  animation: pageFadeIn 1s ease-in;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  animation: zoomIn 5s ease-in-out infinite alternate;
+}
+
+/* Quiz box */
+.quiz-container {
+  background: #f9e79f;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: slideUpFade 1s ease-out;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  color: #rgb(rgba(0, 0, 0, 0.05)red);
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  background: #f1f1f1;
+  color: black;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#options button:hover {
+  background-color: #e1e1e1;
+  transform: translateX(5px);
+}
+
+#options button.correct {
+  background-color: #28a745;
+  color: white;
+  animation: bounce 0.4s ease;
+}
+
+#options button.wrong {
+  background-color: #dc3545;
+  color: white;
+  animation: shake 0.4s ease;
+}
+
+.hide {
+  display: none;
+}
+
+#result-box {
+  animation: glowSlideUp 0.8s ease-out;
+}
+
+#result-box h2 {
+  font-size: 1.5rem;
+  color: #4caf50;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes glowSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
