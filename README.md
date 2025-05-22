@@ -39,3 +39,5 @@ CSS
 JavaScript
 
 ## OUTPUT: 
+
+<img width="1080" alt="Image" src="https://github.com/user-attachments/assets/f8337f11-3dd5-4c4f-957f-9a49ad4941c1" />
